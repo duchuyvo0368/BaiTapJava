@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public class Bai26 {
     private static int demSoUoc(int a){
         int n=0;
-        for (int i=0;i<a;i++){
-            if(a%i==0){
+        for (int i=1;i<a;i++){
+            if((a % i)==0){
                 n++;
             }
         }
@@ -10,6 +12,9 @@ public class Bai26 {
     }
 
     public static void main(String[] args) {
-        System.out.println();;
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("nhap so a:");
+        int a=scanner.nextInt();
+        System.out.println("so uoc cua "+a+" là: "+demSoUoc(a));;
     }
 }
