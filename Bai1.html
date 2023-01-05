@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiêu đề cửa sổ: Tạo form và các điều khiển trên form</title>
+    <script>
+        function Register() {
+            var txtFullName = document.getElementById('txtFullName');
+            var txtAddress = document.getElementById('txtAddress');
+            var txtPhone = document.getElementById('txtPhone');
+            var txtMale = document.getElementById('txtMale');
+            var txtFemale = document.getElementById('txtFemale');
+            var job = document.getElementById('cboJob');
+            var product = document.getElementById('cboProduct');
+            var tb = document.getElementById('tb');
+            var txtNumber = document.getElementById('txtNumber');
+            if (txtFullName.value.trim() == '')
+                alert('Họ và tên không được để trống !');
+            else {
+                if (txtAddress.value.trim() == '')
+                    alert('địa chỉ không được để trống !');
+                else {
+                    if (txtPhone.value.trim() == '')
+                        alert('Số điện thoại không được để trống !');
+                    else {
+                        if (txtMale.checked == false && txtFemale.checked == false)
+                            alert('Vui lòng chọn giới tính');
+                        else {
+                            if (txtNumber.value.trim() == '')
+                                alert('Vui lòng nhập số người tham gia');
+
+                            else
+                                tb.innerHTML = "Bạn đã đăng ký thành công!!!";
+                        }
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<table border="1" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="font-size: 20px;color: aqua;font-weight: bold">Phiếu đăng ký tham giá chường trình
+            khuyễn mãi
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="1" style="background-color:aquamarine;width: 450px;border-color:antiquewhite "
+                   cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        Họ và tên
+                    </td>
+                    <td>
+                        <input type="text" id="txtFullName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        Địa chỉ
+                    </td>
+                    <td>
+                        <input type="text" id="txtAddress">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Điện thoại
+                    </td>
+                    <td>
+                        <input type="text" id="txtPhone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phái
+                    </td>
+                    <td>
+
+                        <span style="margin-left: 35px;">Nam: </span><input type="radio" name="txtSex" id="txtMale"
+                                                                            value="Nam">
+                        <span>Nữ: </span><input type="radio" name="txtSex" id="txtFemale" value="Nữ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nghề nghiệp
+                    </td>
+                    <td>
+                        <select name="job" id="cboJob">
+                            <option value="doctor">Bác sĩ</option>
+                            <option value="engineer">Kĩ sư</option>
+                            <option value="teacher">Giáo viên</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chọn sản phẩm tham gia
+                    </td>
+                    <td>
+                        <select name="product" id="cboProduct">
+                            <option value="1">Kem đánh răng</option>
+                            <option value="2">Bột giặt</option>
+                            <option value="3">Dầu gội đầu</option>
+                            <option value="4">Sữa tắm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Số người dự đoán
+                    </td>
+                    <td>
+                        <input type="text" id="txtNumber">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button onclick="Register()">Đồng ý</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <span id="tb"></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký du lịch</title>
+  <script>
+    function checkRegister(){
+      var txtFullName		= document.getElementById('txtFullName');
+      var txtAddress		= document.getElementById('txtAddress');
+      var txtPhone     	= document.getElementById('txtPhone');
+      var rdiPlane 		= document.getElementById('rdiPlane');
+      var rdiCar 			= document.getElementById('rdiCar');
+      var txtPeople     	= document.getElementById('txttxtPeople');
+      var txtChildren 	= document.getElementById('txttxtChildren');
+      var tb      		= document.getElementById('tb');
+
+      if (txtFullName.value.trim() == '') {
+        alert('Họ và tên không được để trống !');
+        txtFullName.focus();
+      }
+      else
+      {
+        if (txtAddress.value.trim() == '') {
+          alert('địa chỉ không được để trống !');
+          txtAddress.focus();
+        }
+        else {
+          if (txtPhone.value.trim() == '') {
+            alert('Số điện thoại không được để trống !');
+            txtPhone.focus();
+          }
+          else{
+            if (rdiPlane.checked == false && rdiCar.checked == false)
+              alert('Vui lòng chọn phương tiện');
+            else
+              tb.innerHTML="Bạn đã đăng ký thành công!!!";
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<table  border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr> <td align="center" style="font-size: 20px;color:orange;font-weight: bold">Đăng ký du lịch</td>
+  </tr>
+  <tr><td>
+    <table border="1" style="background-color:antiquewhite;width: 450px;border-color:royalblue" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          Họ và tên
+        </td>
+        <td>
+          <input type="text" id="txtFullName">
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          Địa chỉ
+
+        </td>
+        <td>
+          <input type="text" id="txtAddress">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Điện thoại
+        </td>
+        <td>
+          <input type="text" id="txtPhone">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Khách Việt Nam
+        </td>
+        <td>
+
+          <input type="checkbox" id="chkCustomer">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CHọn tour
+        </td>
+        <td>
+          <select name="tour" id="cboTour">
+            <optgroup label="Miền bắc">
+              <option value="1">Hà Nội - Vĩnh Long - Sapa </option>
+              <option value="2">Hà Nội - Chùa Hương -  Ninh Bình</option>
+              <option value="3">Hà Nội - Cát Bà - Tuấn Châu  </option>
+            </optgroup>
+
+            <optgroup label="Miền trung">
+              <option value="1">Huế - Bach Mã - Đà Nẵng </option>
+              <option value="2">Nha Trang - Đà Lạt</option>
+              <option value="3">Buôn Mê Thuộc - Gia Lai - Kontum  </option>
+            </optgroup>
+
+            <optgroup label="Miền Nam">
+              <option value="1">TP.HCM - Cần Thơ - Cà Mau</option>
+              <option value="2">TP.HCM - Mỹ Tho</option>
+            </optgroup>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Phương tiện
+        </td>
+        <td>
+
+          <span style="margin-left: 35px;">Máy bay </span><input type="radio" name="phuongtien" id="rdiPlane" value="maybay">
+          <span>Ô tô </span><input type="radio" name="phuongtien" id="rdiCar" value="O to">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <fieldset style="width:300px;border-color: red;margin-bottom:10px "> <legend>Số lượng đoàn khách </legend>
+            <label >Người lớn</label>
+            <input name="people" id="txtPeople"  size="5"/>
+
+            <label>Trẻ em</label>
+            <input name="Children" id="txtChildren" size="5"/>
+          </fieldset>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          Ghi chú thêm
+        </td>
+        <td>
+          <textarea name="txtComment" cols="30"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button onclick="checkRegister()">Đồng ý</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" >
+          <span id="tb"></span>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+</table>
+
+</body>
+</html>
