@@ -3,43 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Đăng ký du lịch</title>
-  <script>
-    function checkRegister(){
-      var txtFullName		= document.getElementById('txtFullName');
-      var txtAddress		= document.getElementById('txtAddress');
-      var txtPhone     	= document.getElementById('txtPhone');
-      var rdiPlane 		= document.getElementById('rdiPlane');
-      var rdiCar 			= document.getElementById('rdiCar');
-      var txtPeople     	= document.getElementById('txttxtPeople');
-      var txtChildren 	= document.getElementById('txttxtChildren');
-      var tb      		= document.getElementById('tb');
-
-      if (txtFullName.value.trim() == '') {
-        alert('Họ và tên không được để trống !');
-        txtFullName.focus();
-      }
-      else
-      {
-        if (txtAddress.value.trim() == '') {
-          alert('địa chỉ không được để trống !');
-          txtAddress.focus();
-        }
-        else {
-          if (txtPhone.value.trim() == '') {
-            alert('Số điện thoại không được để trống !');
-            txtPhone.focus();
-          }
-          else{
-            if (rdiPlane.checked == false && rdiCar.checked == false)
-              alert('Vui lòng chọn phương tiện');
-            else
-              tb.innerHTML="Bạn đã đăng ký thành công!!!";
-
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body>
 
