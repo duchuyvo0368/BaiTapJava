@@ -10,9 +10,15 @@ public class Bai29 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        System.out.print("nhap so n:");
-        int n=scanner.nextInt();
-        System.out.println("gia tri cua (2n+1) la:"+tinh(n));
+        int n;
+        do {
+            System.out.print("nhap so n:");
+            Scanner scanner = new Scanner(System.in);
+            n = scanner.nextInt();
+            if (n < 0) {
+                System.out.println("n phai la so lon hon 0");
+            }
+        } while (n < 0);
+        System.out.println("gia tri cua (2n+1) la:" + tinh(n));
     }
 }

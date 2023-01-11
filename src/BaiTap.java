@@ -1,18 +1,22 @@
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 public class BaiTap {
     public static void main(String[] args) {
-        System.out.println("nhap so n: ");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        out.println("nhap so n: ");
+        Scanner scanner = new Scanner(in);
+        String exercise = scanner.toString();
         //  System.out.println(printFib(n));
 
-        int c = 0;
-        for (int i = 1; i <= n; i++) {
-            System.out.println("\n" + fibonacci_series(c));
-            c++;
-        }
-    }
+//        int c = 0;
+//        for (int i = 1; i <= n; i++) {
+//            System.out.println("\n" + fibonacci_series(c));
+//            c++;
+//        }
+
+
+}
 
     private static int bai33(int n) {
         int s = 0, i = 1;

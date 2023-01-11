@@ -22,6 +22,6 @@ public class Bai25 {
         System.out.println("nhap so b\n");
         int b=scanner.nextInt();
         System.out.println("Uoc chung lon nhat"+UCLN(a,b));
-        System.out.println("Boi chung lon nhat"+BCNN(a,b));
+        System.out.println("Boi chung nho nhat"+BCNN(a,b));
     }
 }
