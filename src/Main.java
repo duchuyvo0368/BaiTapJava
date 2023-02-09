@@ -39,7 +39,8 @@ public class Main {
         int primeCount = 0;
         for (int i = 2; i <= n; i++) {
             if (i % 2 == 0) {
-                sum += i;
+                if (i != n)
+                    sum += i;
             }
             if (isPrime(i)) {
                 primeCount++;
