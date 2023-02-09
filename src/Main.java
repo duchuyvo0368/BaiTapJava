@@ -19,14 +19,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Nhập số nguyên n: ");
-        int n = scan.nextInt();
+        int n = 0;
 
-        if (n >= 100000) {
-            System.out.println("Số nhập vào phải nhỏ hơn 5 chữ số");
-            return;
-        }
+
+        do {
+            System.out.print("nhap so n:");
+            Scanner scanner = new Scanner(System.in);
+            n = scanner.nextInt();
+            if (n < 0) {
+                System.out.println("n phai la so lon hon 0");
+            }
+            if (n >= 100000) {
+                System.out.println("Số nhập vào phải nhỏ hơn 5 chữ số");
+                return;
+            }
+        } while (n < 0);
 
         int sum = 0;
         int primeCount = 0;
